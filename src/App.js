@@ -14,32 +14,19 @@ import {
 } from "react-router-dom";
 console.log("react version is", React.version)
 function App() {
-  const user=true;
+  const user=false;
   return (
-    <>
-
     <Router>
         <TopBar/>
         <Routes>
               <Route exact path="/" element={<Home/>}/>
-              <Route path="/register">
-              {user ? <Home/> : <Register/>}
-              </Route>
-              <Route path="/login">
-              {user ? <Home/> : <Login/>}
-              </Route>
-              <Route path="/write">
-              {user ? <Home/> : <Register/>}
-              </Route>
-              <Route path="/settings">
-              {user ? <Home/> : <Settings/>}
-              </Route>
-              <Route path="/post/:postId">
-              <Single/>
-              </Route>
+              <Route path="/register" element={user ? <Home/> : <Register/>}/>
+              <Route path="/login" element={user ? <Home/> : <Login/>}/>
+              <Route path="/write" element={user ? <Write/> : <Home/>}/>
+              <Route path="/settings" element={user ? <Home/> : <Settings/>}/>
+              <Route path="/post/:postId" element={<Single/>}/>
         </Routes>
     </Router>
-    </>
   );
 
 }
