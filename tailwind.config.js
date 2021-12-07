@@ -12,6 +12,7 @@ module.exports = {
       fontFamily:{
         josefinsans:['Josefin Sans', 'sans-serif'],
         loraserif:['Lora serif'],
+        varela:['Varela Round', 'sans-serif'],
       },
       height:{
         '50':'50px',

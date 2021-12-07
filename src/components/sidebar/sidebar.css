@@ -1,0 +1,6 @@
+.sidebarListItem{
+    @apply cursor-pointer p-2;
+}
+.sidebarIcon{
+    @apply cursor-pointer text-sm;
+}

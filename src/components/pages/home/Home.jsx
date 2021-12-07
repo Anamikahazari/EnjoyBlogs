@@ -11,7 +11,5 @@ export default function Home() {
            <Sidebar/>
         </div>
         </>
-
- 
     )
 }
